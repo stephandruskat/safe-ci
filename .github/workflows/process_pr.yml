@@ -1,10 +1,10 @@
-name: Comment on the pull request
+name: Process pull request
 
 # read-write repo token
 # access to secrets
 on:
   workflow_run:
-    workflows: ["receive-pr"]
+    workflows: ["Receive PR"]
     types:
       - completed
 
