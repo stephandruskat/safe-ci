@@ -1,8 +1,7 @@
 package net.sdruskat.ci;
 
 /**
- * Test app
- *
+ * Test app TODO Add period here.
  */
 public class App {
 
