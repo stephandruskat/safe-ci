@@ -1,7 +1,7 @@
 package net.sdruskat.ci;
 
 /**
- * Test app TODO 1
+ * Test app TODO 2
  */
 public class App {
 
