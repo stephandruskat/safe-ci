@@ -15,7 +15,7 @@ public class AppTest {
   @Test
   public void testAddPass() {
     App app = new App();
-    assertEquals(1, app.add(1, 1));
+    assertEquals(2, app.add(1, 1));
   }
 
 }
