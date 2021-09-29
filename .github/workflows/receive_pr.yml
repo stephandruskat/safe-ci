@@ -34,4 +34,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: pr
-          path: pr/
+          path: |
+            pr/
+            target/
