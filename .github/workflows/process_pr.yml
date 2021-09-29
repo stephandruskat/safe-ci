@@ -57,6 +57,7 @@ jobs:
         run: |
           CE_TASK_URL = "$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
           echo $CE_TASK_URL
+          wget '"$($CE_TASK_URL)"' -O quality-gate.json
       - name: 'Comment on PR'
         uses: actions/github-script@v3
         with:
