@@ -13,7 +13,6 @@ public class App {
    * @return the sum of i and j
    */
   public int add(int i, int j) {
-    // TODO Code smell
     return i + j;
   }
 
