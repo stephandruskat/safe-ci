@@ -60,7 +60,7 @@ jobs:
         run: |
           CE_TASK_URL="$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
           echo $CE_TASK_URL
-          while [[ "$(curl -u "$SONAR_TOKEN": $CE_TASK_URL | jq -r '.task.analysisId')" != "SUCCESS" ]]; do sleep 5; done
+          while [[ "$(curl -u "$SONAR_TOKEN": $CE_TASK_URL | jq -r '.task.status')" != "SUCCESS" ]]; do echo "$(curl -u "$SONAR_TOKEN": $CE_TASK_URL | jq -r '.task.status')" && sleep 5; done
           curl -u "$SONAR_TOKEN": $CE_TASK_URL -o ce-task.json
           cat ce-task.json
           ANALYSIS_ID=$(cat ce-task.json | jq -r '.task.analysisId')
