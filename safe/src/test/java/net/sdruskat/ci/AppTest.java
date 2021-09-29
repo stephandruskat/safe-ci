@@ -16,6 +16,7 @@ public class AppTest {
   public void testAddPass() {
     App app = new App();
     assertEquals(2, app.add(1, 1));
+    assertEquals(4, app.add(1, 3));
   }
 
 }
