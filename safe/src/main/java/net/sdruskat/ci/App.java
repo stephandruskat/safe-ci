@@ -15,7 +15,6 @@ public class App {
   public int add(int i, int j) {
     // TODO Code smell
     return i + j;
-    // TODO Another code smell
   }
 
 }
