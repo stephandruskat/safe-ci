@@ -6,7 +6,7 @@ package net.sdruskat.ci;
 public class App {
 
   /**
-   * Adds two integers
+   * Adds two integers TODO Add period here.
    * 
    * @param i integer
    * @param j integer to add
