@@ -55,8 +55,10 @@ jobs:
       - run: cat ./safe/target/sonar/report-task.txt
       - name: 'Extract Quality Gate info for this analysis'
         run: |
-          CE_TASK_URL = "$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
+          CE_TASK_URL="$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
           echo $CE_TASK_URL
+          curl curl -H "Authorization: OAuth $(SONAR_TOKEN)" $CE_TASK_URL -o quality-gate.json
+          cat quality-gate.json
       - name: 'Comment on PR'
         uses: actions/github-script@v3
         with:
