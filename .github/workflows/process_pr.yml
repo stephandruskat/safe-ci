@@ -54,6 +54,9 @@ jobs:
         run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=stephandruskat_safe-ci
       - run: cat ./safe/target/sonar/report-task.txt
       - name: 'Extract Quality Gate info for this analysis'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           CE_TASK_URL="$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
           echo $CE_TASK_URL
