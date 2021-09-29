@@ -26,6 +26,8 @@ jobs:
       - name: Build and analyze
         working-directory: ./safe
         run: mvn -B org.jacoco:jacoco-maven-plugin:prepare-agent verify org.jacoco:jacoco-maven-plugin:report
+      - name: Show build results
+        run: ls -lisaht .
     #################################### GitHub stuff below
       - name: Save PR number
         run: |
@@ -34,6 +36,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: pr
-          path: |
-            pr/
-            target/
+          path: pr/
