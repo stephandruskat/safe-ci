@@ -51,8 +51,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         working-directory: ./safe
-        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=stephandruskat_safe-ci -Dsonar.pullrequest.github.summary_comment=true -Dsonar.buildString=this-is-a-test -Dsonar.scm.revision=testrevision
+        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=stephandruskat_safe-ci
       - run: cat ./safe/target/sonar/report-task.txt
+      - name: 'Extract Quality Gate info for this analysis'
+        run: |
+          CE_TASK_URL = "$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
+          echo $CE_TASK_URL
       - name: 'Comment on PR'
         uses: actions/github-script@v3
         with:
