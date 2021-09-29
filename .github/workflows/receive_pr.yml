@@ -27,7 +27,7 @@ jobs:
         working-directory: ./safe
         run: mvn -B org.jacoco:jacoco-maven-plugin:prepare-agent verify org.jacoco:jacoco-maven-plugin:report
       - name: Show build results
-        run: ls -lisaht .
+        run: ls -lisahtR .
     #################################### GitHub stuff below
       - name: Save PR number
         run: |
