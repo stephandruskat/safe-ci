@@ -60,6 +60,7 @@ jobs:
         run: |
           CE_TASK_URL="$(sed -n 's/^ceTaskUrl=//p' ./safe/target/sonar/report-task.txt)"
           echo $CE_TASK_URL
+          sleep 1m
           curl -u "$SONAR_TOKEN": $CE_TASK_URL -o quality-gate.json
           cat quality-gate.json
       - name: 'Comment on PR'
