@@ -23,7 +23,15 @@ public class App {
   }
 
   public boolean isTrue() {
-    return true;
+    if (true == false) {
+      return false;
+    }
+    else if (false == true) {
+      return true;
+    }
+    else {
+      return true;
+    }
   }
 
 }
