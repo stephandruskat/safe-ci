@@ -22,4 +22,8 @@ public class App {
                         return i + j;
   }
 
+  public boolean isTrue() {
+    return true;
+  }
+
 }
