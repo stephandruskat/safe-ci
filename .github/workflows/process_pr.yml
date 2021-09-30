@@ -64,7 +64,11 @@ jobs:
           curl -u "$SONAR_TOKEN": $CE_TASK_URL -o ce-task.json
           cat ce-task.json
           ANALYSIS_ID=$(cat ce-task.json | jq -r '.task.analysisId')
+          BRANCH="$(echo ./pr/BRANCH)"
+          echo $BRANCH
           curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/qualitygates/project_status?analysisId=$ANALYSIS_ID" -o quality-gate.json
+          # curl -u "$SONAR_TOKEN": "https://sonarcloud.io/project/issues?id=stephandruskat_safe-ci&branch=develop&resolved=false&types=BUG
+          # curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/qualitygates/project_status?analysisId=$ANALYSIS_ID" -o quality-gate.json
           cat quality-gate.json | jq --color-output
       - name: 'Comment on PR'
         uses: actions/github-script@v3

@@ -33,6 +33,7 @@ jobs:
         run: |
           mkdir -p ./pr
           echo ${{ github.event.number }} > ./pr/NR
+          echo ${GITHUB_REF##*/} > ./pr/BRANCH
       - uses: actions/upload-artifact@v2
         with:
           name: pr
