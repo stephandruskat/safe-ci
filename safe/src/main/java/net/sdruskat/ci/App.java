@@ -1,13 +1,7 @@
 package net.sdruskat.ci;
 
 /**
- * Test app TODO 11
- * FIXME Using component key proper, fix error
- * Metric keys, eh!
- * Pretty rpint
- * Show metics
- * FINALLY?
- * TODO AKKA
+ * Test app TODO 12
  */
 public class App {
 
