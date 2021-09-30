@@ -5,6 +5,7 @@ package net.sdruskat.ci;
  * FIXME Using component key proper, fix error
  * Metric keys, eh!
  * Pretty rpint
+ * Show metics
  */
 public class App {
 
