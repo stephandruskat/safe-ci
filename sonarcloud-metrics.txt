@@ -1,199 +1,100 @@
-{
-"key": "new_technical_debt",
-      "description": "Added technical debt",
-"key": "blocker_violations",
-      "description": "Blocker issues",
-"key": "bugs",
-      "description": "Bugs",
-"key": "classes",
-      "description": "Classes",
-"key": "code_smells",
-      "description": "Code Smells",
-"key": "cognitive_complexity",
-      "description": "Cognitive complexity",
-"key": "comment_lines",
-      "description": "Number of comment lines",
+- new_technical_debt: Added technical debt
+- blocker_violations: Blocker issues
+- bugs: Bugs
+- classes: Classes
+- code_smells: Code Smells
+- cognitive_complexity: Cognitive complexity
+- comment_lines: Number of comment lines
 "key": "comment_lines_data",
-"key": "comment_lines_density",
-      "description": "Comments balanced by ncloc + comment lines",
-"key": "class_complexity",
-      "description": "Complexity average by class",
-"key": "file_complexity",
-      "description": "Complexity average by file",
-"key": "function_complexity",
-      "description": "Complexity average by function",
-"key": "complexity_in_classes",
-      "description": "Cyclomatic complexity in classes",
-"key": "complexity_in_functions",
-      "description": "Cyclomatic complexity in functions",
-"key": "branch_coverage",
-      "description": "Condition coverage",
-"key": "new_branch_coverage",
-      "description": "Condition coverage of new/changed code",
-"key": "conditions_to_cover",
-      "description": "Conditions to cover",
-"key": "new_conditions_to_cover",
-      "description": "Conditions to cover on new code",
-"key": "confirmed_issues",
-      "description": "Confirmed issues",
-"key": "coverage",
-      "description": "Coverage by tests",
-"key": "new_coverage",
-      "description": "Coverage of new/changed code",
-"key": "critical_violations",
-      "description": "Critical issues",
-"key": "complexity",
-      "description": "Cyclomatic complexity",
-"key": "last_commit_date",
-"key": "development_cost",
-      "description": "Development cost",
-"key": "new_development_cost",
-      "description": "Development cost on new code",
-"key": "directories",
-      "description": "Directories",
-"key": "duplicated_blocks",
-      "description": "Duplicated blocks",
-"key": "new_duplicated_blocks",
-      "description": "Duplicated blocks on new code",
-"key": "duplicated_files",
-      "description": "Duplicated files",
-"key": "duplicated_lines",
-      "description": "Duplicated lines",
-"key": "duplicated_lines_density",
-      "description": "Duplicated lines balanced by statements",
-"key": "new_duplicated_lines_density",
-      "description": "Duplicated lines (%) on new code balanced by statements",
-"key": "new_duplicated_lines",
-      "description": "Duplicated Lines on New Code",
-"key": "duplications_data",
-      "description": "Duplications details",
-"key": "effort_to_reach_maintainability_rating_a",
-      "description": "Effort to reach maintainability rating A",
-"key": "executable_lines_data",
-"key": "false_positive_issues",
-      "description": "False positive issues",
-"key": "file_complexity_distribution",
-      "description": "Files distribution /complexity",
-"key": "files",
-      "description": "Number of files",
-"key": "function_complexity_distribution",
-      "description": "Functions distribution /complexity",
-"key": "functions",
-      "description": "Functions",
-"key": "generated_lines",
-      "description": "Number of generated lines",
-"key": "generated_ncloc",
-      "description": "Generated non Commenting Lines of Code",
-"key": "info_violations",
-      "description": "Info issues",
-"key": "violations",
-      "description": "Issues",
-"key": "line_coverage",
-      "description": "Line coverage",
-"key": "new_line_coverage",
-      "description": "Line coverage of added/changed code",
-"key": "lines",
-      "description": "Lines",
-"key": "ncloc",
-      "description": "Non commenting lines of code",
-"key": "ncloc_language_distribution",
-      "description": "Non Commenting Lines of Code Distributed By Language",
-"key": "lines_to_cover",
-      "description": "Lines to cover",
-"key": "new_lines_to_cover",
-      "description": "Lines to cover on new code",
-"key": "sqale_rating",
-      "description": "A-to-E rating based on the technical debt ratio",
-"key": "new_maintainability_rating",
-      "description": "Maintainability rating on new code",
-"key": "major_violations",
-      "description": "Major issues",
-"key": "minor_violations",
-      "description": "Minor issues",
-"key": "ncloc_data",
-"key": "new_blocker_violations",
-      "description": "New Blocker issues",
-"key": "new_bugs",
-      "description": "New Bugs",
-"key": "new_code_smells",
-      "description": "New Code Smells",
-"key": "new_critical_violations",
-      "description": "New Critical issues",
-"key": "new_info_violations",
-      "description": "New Info issues",
-"key": "new_violations",
-      "description": "New issues",
-"key": "new_lines",
-      "description": "New lines",
-"key": "new_major_violations",
-      "description": "New Major issues",
-"key": "new_minor_violations",
-      "description": "New Minor issues",
-"key": "new_security_hotspots",
-      "description": "New Security Hotspots",
-"key": "new_vulnerabilities",
-      "description": "New Vulnerabilities",
-"key": "open_issues",
-      "description": "Open issues",
-"key": "quality_profiles",
-      "description": "Details of quality profiles used during analysis",
-"key": "projects",
-      "description": "Number of projects",
-"key": "public_api",
-      "description": "Public API",
-"key": "public_documented_api_density",
-      "description": "Public documented classes and functions balanced by ncloc",
-"key": "public_undocumented_api",
-      "description": "Public undocumented classes, functions and variables",
-"key": "quality_gate_details",
-      "description": "The project detailed status with regard to its quality gate",
-"key": "alert_status",
-      "description": "The project status with regard to its quality gate.",
-"key": "reliability_rating",
-      "description": "Reliability rating",
-"key": "new_reliability_rating",
-      "description": "Reliability rating on new code",
-"key": "reliability_remediation_effort",
-      "description": "Reliability Remediation Effort",
-"key": "new_reliability_remediation_effort",
-      "description": "Reliability remediation effort on new code",
-"key": "reopened_issues",
-      "description": "Reopened issues",
-"key": "security_hotspots",
-      "description": "Security Hotspots",
-"key": "security_hotspots_reviewed",
-      "description": "Percentage of Security Hotspots Reviewed",
-"key": "new_security_hotspots_reviewed",
-      "description": "Percentage of Security Hotspots Reviewed on New Code",
-"key": "security_rating",
-      "description": "Security rating",
-"key": "new_security_rating",
-      "description": "Security rating on new code",
-"key": "security_remediation_effort",
-      "description": "Security remediation effort",
-"key": "new_security_remediation_effort",
-      "description": "Security remediation effort on new code",
-"key": "security_review_rating",
-      "description": "Security Review Rating",
-"key": "new_security_review_rating",
-      "description": "Security Review Rating on New Code",
-"key": "security_hotspots_reviewed_status",
-      "description": "Security Review Reviewed Status",
-"key": "new_security_hotspots_reviewed_status",
-      "description": "Security Review Reviewed Status on New Code",
-"key": "security_hotspots_to_review_status",
-      "description": "Security Review To Review Status",
-"key": "new_security_hotspots_to_review_status",
-      "description": "Security Review To Review Status on New Code",
-"key": "skipped_tests",
-      "description": "Number of skipped unit tests",
-"key": "statements",
-      "description": "Number of statements",
-"key": "sqale_index",
-      "description": "Total effort (in hours) to fix all the issues on the component and therefore to comply to all the requirements.",
-"key": "sqale_debt_ratio",
-      "description": "Ratio of the actual technical debt compared to the estimated cost to develop the whole source code from scratch",
-"key": "new_sqale_debt_ratio",
-      "description": "Technical Debt Ratio of new/changed code.",
-  ],
-}
+- comment_lines_density: Comments balanced by ncloc + comment lines
+- class_complexity: Complexity average by class
+- file_complexity: Complexity average by file
+- function_complexity: Complexity average by function
+- complexity_in_classes: Cyclomatic complexity in classes
+- complexity_in_functions: Cyclomatic complexity in functions
+- branch_coverage: Condition coverage
+- new_branch_coverage: Condition coverage of new/changed code
+- conditions_to_cover: Conditions to cover
+- new_conditions_to_cover: Conditions to cover on new code
+- confirmed_issues: Confirmed issues
+- coverage: Coverage by tests
+- new_coverage: Coverage of new/changed code
+- critical_violations: Critical issues
+- complexity: Cyclomatic complexity
+- last_commit_date
+- development_cost: Development cost
+- new_development_cost: Development cost on new code
+- directories: Directories
+- duplicated_blocks: Duplicated blocks
+- new_duplicated_blocks: Duplicated blocks on new code
+- duplicated_files: Duplicated files
+- duplicated_lines: Duplicated lines
+- duplicated_lines_density: Duplicated lines balanced by statements
+- new_duplicated_lines_density: Duplicated lines (%) on new code balanced by statements
+- new_duplicated_lines: Duplicated Lines on New Code
+- duplications_data: Duplications details
+- effort_to_reach_maintainability_rating_a: Effort to reach maintainability rating A
+- executable_lines_data
+- false_positive_issues: False positive issues
+- file_complexity_distribution: Files distribution /complexity
+- files: Number of files
+- function_complexity_distribution: Functions distribution /complexity
+- functions: Functions
+- generated_lines: Number of generated lines
+- generated_ncloc: Generated non Commenting Lines of Code
+- info_violations: Info issues
+- violations: Issues
+- line_coverage: Line coverage
+- new_line_coverage: Line coverage of added/changed code
+- lines: Lines
+- ncloc: Non commenting lines of code
+- ncloc_language_distribution: Non Commenting Lines of Code Distributed By Language
+- lines_to_cover: Lines to cover
+- new_lines_to_cover: Lines to cover on new code
+- sqale_rating: A-to-E rating based on the technical debt ratio
+- new_maintainability_rating: Maintainability rating on new code
+- major_violations: Major issues
+- minor_violations: Minor issues
+- ncloc_data
+- new_blocker_violations: New Blocker issues
+- new_bugs: New Bugs
+- new_code_smells: New Code Smells
+- new_critical_violations: New Critical issues
+- new_info_violations: New Info issues
+- new_violations: New issues
+- new_lines: New lines
+- new_major_violations: New Major issues
+- new_minor_violations: New Minor issues
+- new_security_hotspots: New Security Hotspots
+- new_vulnerabilities: New Vulnerabilities
+- open_issues: Open issues
+- quality_profiles: Details of quality profiles used during analysis
+- projects: Number of projects
+- public_api: Public API
+- public_documented_api_density: Public documented classes and functions balanced by ncloc
+- public_undocumented_api: Public undocumented classes, functions and variables
+- quality_gate_details: The project detailed status with regard to its quality gate
+- alert_status: The project status with regard to its quality gate.
+- reliability_rating: Reliability rating
+- new_reliability_rating: Reliability rating on new code
+- reliability_remediation_effort: Reliability Remediation Effort
+- new_reliability_remediation_effort: Reliability remediation effort on new code
+- reopened_issues: Reopened issues
+- security_hotspots: Security Hotspots
+- security_hotspots_reviewed: Percentage of Security Hotspots Reviewed
+- new_security_hotspots_reviewed: Percentage of Security Hotspots Reviewed on New Code
+- security_rating: Security rating
+- new_security_rating: Security rating on new code
+- security_remediation_effort: Security remediation effort
+- new_security_remediation_effort: Security remediation effort on new code
+- security_review_rating: Security Review Rating
+- new_security_review_rating: Security Review Rating on New Code
+- security_hotspots_reviewed_status: Security Review Reviewed Status
+- new_security_hotspots_reviewed_status: Security Review Reviewed Status on New Code
+- security_hotspots_to_review_status: Security Review To Review Status
+- new_security_hotspots_to_review_status: Security Review To Review Status on New Code
+- skipped_tests: Number of skipped unit tests
+- statements: Number of statements
+- sqale_index: Total effort (in hours) to fix all the issues on the component and therefore to comply to all the requirements.
+- sqale_debt_ratio: Ratio of the actual technical debt compared to the estimated cost to develop the whole source code from scratch
+- new_sqale_debt_ratio: Technical Debt Ratio of new/changed code.
