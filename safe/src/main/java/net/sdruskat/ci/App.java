@@ -6,6 +6,8 @@ package net.sdruskat.ci;
  * Metric keys, eh!
  * Pretty rpint
  * Show metics
+ * FINALLY?
+ * TODO AKKA
  */
 public class App {
 
@@ -18,6 +20,10 @@ public class App {
   public int add(int i, int j) {
   // TODO ARGH!
                         return i + j;
+  }
+
+  public boolean isTrue() {
+    return true;
   }
 
 }

@@ -64,15 +64,8 @@ jobs:
           curl -u "$SONAR_TOKEN": $CE_TASK_URL -o ce-task.json
           cat ce-task.json
           ANALYSIS_ID=$(cat ce-task.json | jq -r '.task.analysisId')
-          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/qualitygates/project_status?analysisId=$ANALYSIS_ID" -o quality-gate.json
-          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&additionalFields=metrics&metricKeys=bugs,new_vulnerabilities,security_hotspots,code_smells,new_coverage,new_duplicated_lines_density" -o comp.json
-          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/metrics/search" -o metrics.json
-          echo "METRICS"
-          cat metrics.json | jq --color-output
-          echo "COMP"
+          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&additionalFields=metrics&metricKeys=new_bugs,new_vulnerabilities,new_security_hotspots,new_code_smells,new_coverage,new_duplicated_lines_density" -o comp.json
           cat comp.json | jq --color-output
-          echo "QG"
-          cat quality-gate.json | jq --color-output
       - name: 'Comment on PR'
         uses: actions/github-script@v3
         with:

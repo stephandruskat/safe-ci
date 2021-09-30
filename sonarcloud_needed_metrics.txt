@@ -1,0 +1,1 @@
+bugs,new_vulnerabilities,security_hotspots,code_smells,new_coverage,new_duplicated_lines_density
