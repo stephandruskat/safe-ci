@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         working-directory: ./safe
-        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=stephandruskat_safe-ci -Dsonar.analysis.customid="$(cat ./pr/NR)_$(GITHUB_RUN_ID)"
+        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=stephandruskat_safe-ci -Dsonar.analysis.customid="$(cat ../pr/NR)_$GITHUB_RUN_ID"
       - run: cat ./safe/target/sonar/report-task.txt
       - name: 'Extract Quality Gate info for this analysis'
         env:
@@ -62,7 +62,7 @@ jobs:
           while [[ "$(curl -u "$SONAR_TOKEN": $CE_TASK_URL | jq -r '.task.status')" != "SUCCESS" ]]; do echo "$(curl -u "$SONAR_TOKEN": $CE_TASK_URL | jq -r '.task.status')" && sleep 5; done
           curl -u "$SONAR_TOKEN": $CE_TASK_URL -o ce-task.json
           ANALYSIS_ID=$(cat ce-task.json | jq -r '.task.analysisId')
-          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&metricKeys=new_bugs,new_vulnerabilities,new_security_hotspots,new_code_smells,new_coverage,new_duplicated_lines_density&pullRequest=$(cat ./pr/NR)" -o comp.json
+          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&metricKeys=new_bugs,new_vulnerabilities,new_security_hotspots,new_code_smells,new_coverage,new_duplicated_lines_density" -o comp.json
           cat comp.json | jq --color-output
       - name: 'Comment on PR'
         uses: actions/github-script@v3
