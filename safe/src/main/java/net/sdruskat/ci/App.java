@@ -2,7 +2,7 @@ package net.sdruskat.ci;
 
 /**
  * Test app TODO 11
- * FIXME Using component
+ * FIXME Using component NAME only ("safe")
  */
 public class App {
 
