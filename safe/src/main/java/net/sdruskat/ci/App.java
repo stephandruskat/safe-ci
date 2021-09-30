@@ -2,6 +2,7 @@ package net.sdruskat.ci;
 
 /**
  * Test app TODO 10
+ * FIXME Using component
  */
 public class App {
 
