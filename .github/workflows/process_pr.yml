@@ -65,7 +65,7 @@ jobs:
           cat ce-task.json
           ANALYSIS_ID=$(cat ce-task.json | jq -r '.task.analysisId')
           curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/qualitygates/project_status?analysisId=$ANALYSIS_ID" -o quality-gate.json
-          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&additionalFields=metrics" -o comp.json
+          curl -u "$SONAR_TOKEN": "https://sonarcloud.io/api/measures/component?component=stephandruskat_safe-ci&additionalFields=metrics&metricKeys=ncloc,complexity,violations,coverage" -o comp.json
           cat comp.json
           cat quality-gate.json | jq --color-output
       - name: 'Comment on PR'
